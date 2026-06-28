@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UAS Intermediate Academic English — TOEFL Prep</title>
+<style>
+:root{
+  --bg:#07111f; --bg2:#0f1f35; --surface:#ffffff; --surface2:#f7f9fc; --text:#172033; --muted:#657084;
+  --primary:#2563eb; --primary2:#7c3aed; --accent:#06b6d4; --good:#16a34a; --bad:#dc2626; --warn:#f59e0b;
+  --line:#e5e7eb; --radius:22px; --shadow:0 18px 45px rgba(7,17,31,.13);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:linear-gradient(135deg,#07111f 0%,#0e2746 40%,#17113d 100%);color:var(--text);line-height:1.65}
+a{color:inherit}
+.hero{min-height:420px;color:white;position:relative;overflow:hidden;padding:28px 18px 90px}
+.hero:before{content:"";position:absolute;inset:-30%;background:radial-gradient(circle at 20% 20%,rgba(6,182,212,.35),transparent 28%),radial-gradient(circle at 80% 5%,rgba(124,58,237,.34),transparent 30%),radial-gradient(circle at 70% 70%,rgba(37,99,235,.35),transparent 32%);filter:blur(3px)}
+.heroInner{position:relative;max-width:1160px;margin:0 auto}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:48px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.2px}
+.logo{width:42px;height:42px;border-radius:15px;background:linear-gradient(135deg,#06b6d4,#7c3aed);display:grid;place-items:center;box-shadow:0 10px 30px rgba(6,182,212,.32)}
+.pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.24);padding:9px 13px;border-radius:999px;font-weight:700;font-size:13px;backdrop-filter:blur(10px)}
+.heroGrid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center}
+h1{font-size:clamp(34px,5vw,64px);line-height:1.02;margin:0 0 18px;letter-spacing:-1.5px}
+.subtitle{font-size:clamp(16px,2vw,21px);opacity:.92;max-width:760px;margin:0 0 24px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.btn{border:0;border-radius:14px;padding:13px 18px;font-weight:900;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:.2s transform,.2s box-shadow,.2s background}
+.btn:hover{transform:translateY(-2px)}
+.btnPrimary{background:white;color:#0f1f35;box-shadow:0 14px 35px rgba(255,255,255,.18)}
+.btnGhost{background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.25)}
+.statsCard{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:28px;padding:22px;box-shadow:0 25px 80px rgba(0,0,0,.23);backdrop-filter:blur(18px)}
+.statRow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.16);border-radius:20px;padding:16px}
+.stat b{display:block;font-size:28px;line-height:1}
+.stat span{font-size:13px;opacity:.82}
+.quickList{margin:18px 0 0;padding:0;list-style:none}
+.quickList li{display:flex;gap:9px;align-items:flex-start;margin:10px 0;color:rgba(255,255,255,.92)}
+.navWrap{position:sticky;top:0;z-index:50;margin-top:-54px;padding:0 16px}
+.nav{max-width:1160px;margin:0 auto;background:rgba(255,255,255,.92);border:1px solid rgba(255,255,255,.9);border-radius:22px;box-shadow:var(--shadow);display:flex;gap:8px;align-items:center;justify-content:space-between;padding:10px;backdrop-filter:blur(15px)}
+.navLinks{display:flex;gap:6px;overflow:auto}
+.nav a,.nav button{border:0;background:transparent;text-decoration:none;color:#24324a;font-weight:850;padding:11px 13px;border-radius:14px;white-space:nowrap;cursor:pointer}
+.nav a:hover,.nav button:hover{background:#eef5ff;color:#1d4ed8}
+#progressMini{font-weight:900;color:#1d4ed8;background:#eff6ff;border-radius:14px;padding:11px 13px;white-space:nowrap}
+main{max-width:1160px;margin:0 auto;padding:34px 16px 80px}
+.sectionHead{display:flex;align-items:end;justify-content:space-between;gap:18px;margin:38px 0 18px;color:white}
+.sectionHead h2{font-size:34px;letter-spacing:-.6px;margin:0}
+.sectionHead p{margin:0;color:rgba(255,255,255,.74);max-width:610px}
+.panel{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.78);overflow:hidden}
+.panelPad{padding:24px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:0 8px 24px rgba(10,20,40,.06)}
+.card h3{margin:0 0 10px;font-size:20px;color:#111827}
+.card p,.card li{color:#4b5563}
+.tag{display:inline-flex;align-items:center;gap:6px;background:#eef2ff;color:#3730a3;font-weight:900;font-size:12px;border-radius:999px;padding:6px 9px;margin-bottom:12px}
+.note{background:linear-gradient(135deg,#eff6ff,#f5f3ff);border:1px solid #dbeafe;border-radius:20px;padding:18px;margin:16px 0}
+.clauseMap{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.clauseBox{padding:18px;border-radius:20px;border:1px solid #e5e7eb;background:#fafafa;position:relative;overflow:hidden}
+.clauseBox:before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:linear-gradient(90deg,var(--primary),var(--primary2))}
+.tableWrap{overflow:auto;border-radius:18px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;background:white;min-width:720px}
+th,td{border-bottom:1px solid var(--line);padding:14px;text-align:left;vertical-align:top}
+th{background:#f1f5f9;color:#0f172a}
+tr:last-child td{border-bottom:0}
+.quizShell{display:grid;grid-template-columns:280px 1fr;gap:18px;align-items:start}
+.quizSide{position:sticky;top:92px;background:white;border-radius:22px;box-shadow:var(--shadow);border:1px solid var(--line);padding:18px}
+.meter{height:12px;background:#e5e7eb;border-radius:999px;overflow:hidden;margin:10px 0}
+.meter span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--primary2));transition:.25s width}
+.filterBtn{display:flex;width:100%;justify-content:space-between;gap:8px;border:1px solid var(--line);background:#fff;border-radius:14px;padding:10px 12px;margin:8px 0;cursor:pointer;font-weight:800;color:#334155}
+.filterBtn.active{background:#eff6ff;border-color:#93c5fd;color:#1d4ed8}
+.filterBtn small{color:#64748b}
+.question{background:white;border:1px solid var(--line);box-shadow:0 8px 24px rgba(15,23,42,.06);border-radius:22px;margin:16px 0;overflow:hidden}
+.qTop{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:18px 20px 0}
+.qNum{background:#0f172a;color:white;border-radius:14px;padding:7px 10px;font-weight:900;font-size:13px;white-space:nowrap}
+.qCat{background:#f1f5f9;color:#475569;border-radius:999px;padding:7px 10px;font-weight:900;font-size:12px;white-space:nowrap}
+.qText{font-weight:850;color:#111827;margin:12px 20px 14px;white-space:pre-line}
+.options{display:grid;gap:9px;padding:0 20px 18px}
+.option{border:1px solid #d8dee9;background:#fff;border-radius:16px;padding:12px 13px;cursor:pointer;display:flex;gap:10px;align-items:flex-start;transition:.18s border,.18s background,.18s transform}
+.option:hover{transform:translateY(-1px);border-color:#93c5fd;background:#f8fbff}
+.option input{margin-top:4px;accent-color:var(--primary)}
+.option .letter{width:28px;height:28px;min-width:28px;border-radius:10px;display:grid;place-items:center;background:#f1f5f9;font-weight:950;color:#334155}
+.option.correct{background:#ecfdf5;border-color:#86efac}
+.option.wrong{background:#fff1f2;border-color:#fecdd3}
+.option.correct .letter{background:#16a34a;color:#fff}
+.option.wrong .letter{background:#dc2626;color:#fff}
+.explain{display:none;border-top:1px solid var(--line);background:#fbfdff;padding:16px 20px}
+.explain.show{display:block}
+.explain b{color:#0f172a}
+.explain.good{background:#f0fdf4}
+.explain.bad{background:#fff7ed}
+.checkbar{position:sticky;bottom:12px;background:rgba(255,255,255,.92);border:1px solid rgba(226,232,240,.9);box-shadow:var(--shadow);backdrop-filter:blur(14px);border-radius:22px;padding:12px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-top:18px}
+.btnBlue{background:linear-gradient(135deg,var(--primary),var(--primary2));color:white;box-shadow:0 12px 28px rgba(37,99,235,.22)}
+.btnLight{background:#f1f5f9;color:#0f172a;border:1px solid #e2e8f0}
+.result{display:none;background:#111827;color:white;border-radius:18px;padding:16px 18px;font-weight:900}
+.result small{display:block;color:rgba(255,255,255,.72);font-weight:700;margin-top:4px}
+.keyGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(86px,1fr));gap:8px}
+.key{background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:9px;text-align:center;font-weight:900}
+.key span{color:#2563eb}
+.footer{text-align:center;color:rgba(255,255,255,.7);padding:28px 16px 60px}
+.hide{display:none!important}
+@media(max-width:900px){.heroGrid,.quizShell{grid-template-columns:1fr}.grid,.clauseMap{grid-template-columns:1fr}.quizSide{position:static}.sectionHead{display:block}.nav{align-items:flex-start;flex-direction:column}#progressMini{width:100%;text-align:center}}
+@media(max-width:560px){.hero{padding-bottom:80px}.statRow{grid-template-columns:1fr}.panelPad{padding:18px}.qTop{display:block}.qCat{display:inline-flex;margin-top:8px}.checkbar{position:static}}
+@media print{body{background:white}.hero,.navWrap,.quizSide,.checkbar,.footer{display:none}main{max-width:100%;padding:0}.sectionHead{color:#111}.panel,.question,.card{box-shadow:none}.explain{display:block}}
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="heroInner">
+    <div class="topbar">
+      <div class="brand"><div class="logo">📘</div><span>Intermediate Academic English</span></div>
+      <span class="pill">TOEFL-style • No library • No database</span>
+    </div>
+    <div class="heroGrid">
+      <div>
+        <span class="pill">UAS Focus: Meeting VII–XIII</span>
+        <h1>Belajar UAS English lebih enak, bukan sekadar hafal.</h1>
+        <p class="subtitle">Ringkasan materi dibuat sederhana, bagian clause dibuat super pelan, dan semua soal punya pembahasan langsung setelah dijawab.</p>
+        <div class="ctas">
+          <a class="btn btnPrimary" href="#quiz">Mulai latihan soal →</a>
+          <a class="btn btnGhost" href="#clause">Pahami clause dulu</a>
+        </div>
+      </div>
+      <div class="statsCard">
+        <div class="statRow">
+          <div class="stat"><b>65</b><span>soal latihan</span></div>
+          <div class="stat"><b>7</b><span>topik UAS</span></div>
+          <div class="stat"><b>✓</b><span>penjelasan tiap soal</span></div>
+          <div class="stat"><b>0</b><span>library / database</span></div>
+        </div>
+        <ul class="quickList">
+          <li>✅ Jawaban bisa dicek satu-satu saat dipilih.</li>
+          <li>✅ Bisa filter soal berdasarkan materi.</li>
+          <li>✅ Ada skor akhir, progress, dan kunci cepat.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="navWrap">
+  <nav class="nav">
+    <div class="navLinks">
+      <a href="#materi">Materi</a>
+      <a href="#clause">Clause</a>
+      <a href="#strategy">Strategi TOEFL</a>
+      <a href="#quiz">Latihan</a>
+      <a href="#kunci">Kunci</a>
+    </div>
+    <div id="progressMini">0 / 65 terjawab</div>
+  </nav>
+</div>
+<main>
+  <div class="sectionHead" id="materi">
+    <div><h2>Ringkasan materi UAS</h2><p>Lanjutan setelah UTS kemungkinan besar Meeting VII sampai XIII: Structure & Written Expression, lalu Reading.</p></div>
+  </div>
+  <section class="grid">
+    <article class="card"><span class="tag">Meeting VII</span><h3>Subject–Verb Agreement</h3><p>Cari subject inti, jangan tertipu frasa sisipan.</p><ul><li><b>The list</b> of books <b>is</b> long.</li><li><b>The results</b> of the test <b>are</b> clear.</li><li><b>Each</b> student <b>has</b> a card.</li></ul></article>
+    <article class="card"><span class="tag">Meeting VII</span><h3>Comparison</h3><p>Kalau ada <b>than</b>, biasanya comparative. Kalau paling, pakai superlative.</p><ul><li>easier <b>than</b></li><li>more difficult <b>than</b></li><li><b>the</b> most important</li></ul></article>
+    <article class="card"><span class="tag">Meeting VIII</span><h3>Nouns & Verbs</h3><p>Perhatikan singular/plural, uncountable noun, tense, dan passive voice.</p><ul><li>information <b>is</b></li><li>children <b>are</b></li><li>was reviewed = pasif</li></ul></article>
+    <article class="card"><span class="tag">Meeting IX</span><h3>Pronoun & Adjective</h3><p>Pronoun harus cocok dengan kata yang digantikan.</p><ul><li>students → they</li><li>bird → its</li><li>adjective: a difficult question</li></ul></article>
+    <article class="card"><span class="tag">Meeting X</span><h3>Adjective, Adverb, Article</h3><p>Adjective untuk noun; adverb untuk verb. Article tergantung bunyi dan konteks.</p><ul><li>clear explanation</li><li>explain clearly</li><li>an honest student</li></ul></article>
+    <article class="card"><span class="tag">Meeting XI–XIII</span><h3>Preposition & Reading</h3><p>Hafalkan pasangan preposition dan latihan cari makna dari konteks.</p><ul><li>interested in</li><li>responsible for</li><li>tone, purpose, transition</li></ul></article>
+  </section>
+
+  <div class="sectionHead" id="clause">
+    <div><h2>Clause super gampang</h2><p>Clause itu dasar penting karena banyak soal Structure TOEFL mainnya di sini.</p></div>
+  </div>
+  <section class="panel"><div class="panelPad">
+    <div class="note"><b>Rumus paling gampang:</b> Clause = Subject + Verb. Kalau tidak ada subject dan verb, itu biasanya phrase, bukan clause.</div>
+    <div class="clauseMap">
+      <div class="clauseBox"><h3>Independent Clause</h3><p>Bisa berdiri sendiri.</p><p><b>I study English.</b></p><p>Artinya lengkap.</p></div>
+      <div class="clauseBox"><h3>Dependent Clause</h3><p>Tidak bisa berdiri sendiri.</p><p><b>because I study English</b></p><p>Masih menggantung: karena apa?</p></div>
+      <div class="clauseBox"><h3>Reduced Clause</h3><p>Clause yang dipendekkan.</p><p><b>who is standing</b> → <b>standing</b></p><p>Subject + be sering dihapus.</p></div>
+    </div>
+    <h3>3 clause yang paling sering bikin bingung</h3>
+    <div class="tableWrap"><table>
+      <tr><th>Jenis</th><th>Fungsi</th><th>Connector umum</th><th>Contoh mudah</th><th>Cara mengenali</th></tr>
+      <tr><td><b>Noun Clause</b></td><td>Berperan seperti noun: bisa jadi subject/object.</td><td>that, what, whether, if, why, how</td><td>I know <b>that she is right</b>.</td><td>Biasanya menjawab “apa yang diketahui/dikatakan/dipikirkan”.</td></tr>
+      <tr><td><b>Adjective Clause</b></td><td>Menjelaskan noun sebelumnya.</td><td>who, whom, which, that, whose</td><td>The student <b>who sits near me</b> is smart.</td><td>Letaknya menempel setelah noun yang dijelaskan.</td></tr>
+      <tr><td><b>Adverb Clause</b></td><td>Menjelaskan waktu, alasan, syarat, kontras.</td><td>when, because, if, although, after</td><td>I studied <b>because I had a test</b>.</td><td>Bisa menjawab when/why/if/although.</td></tr>
+    </table></div>
+    <div class="note"><b>Trik cepat TOEFL:</b> kalau ada connector seperti <i>because, although, when, if</i>, setelahnya butuh clause lengkap atau reduced clause yang benar. Jangan pilih jawaban yang membuat kalimat punya subject tanpa verb, atau verb tanpa subject.</div>
+  </div></section>
+
+  <div class="sectionHead" id="strategy">
+    <div><h2>Strategi jawab TOEFL-style</h2><p>Gunakan ini saat latihan agar tidak asal feeling.</p></div>
+  </div>
+  <section class="grid">
+    <article class="card"><h3>Structure</h3><p>1) Cari subject. 2) Cari verb. 3) Cek agreement. 4) Cek connector. 5) Baru cek arti.</p></article>
+    <article class="card"><h3>Written Expression</h3><p>Kalau diminta cari error, curigai: subject-verb, tense, pronoun, preposition, article, adjective/adverb.</p></article>
+    <article class="card"><h3>Reading</h3><p>Untuk vocabulary, jangan cuma arti kamus. Masukkan pilihan jawaban ke kalimat, pilih yang paling nyambung.</p></article>
+  </section>
+
+  <div class="sectionHead" id="quiz">
+    <div><h2>Latihan UAS: 65 soal</h2><p>Pilih jawaban. Pembahasan muncul langsung. Setelah selesai, klik cek skor.</p></div>
+  </div>
+  <section class="quizShell">
+    <aside class="quizSide">
+      <h3 style="margin:0">Progress latihan</h3>
+      <div class="meter"><span id="meterFill"></span></div>
+      <div id="sideProgress" style="font-weight:900;color:#334155">0 dari 65 soal terjawab</div>
+      <p style="color:#64748b;margin:8px 0 14px;font-size:14px">Filter soal berdasarkan materi:</p>
+      <div id="filters"></div>
+      <button class="btn btnLight" style="width:100%;justify-content:center;margin-top:10px" onclick="showAllExplanations()">Tampilkan semua pembahasan</button>
+      <button class="btn btnLight" style="width:100%;justify-content:center;margin-top:8px" onclick="resetQuiz()">Reset latihan</button>
+    </aside>
+    <div>
+      <div id="quizBox"></div>
+      <div class="checkbar">
+        <div id="result" class="result"></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-left:auto">
+          <button class="btn btnLight" onclick="showAllExplanations()">Lihat semua pembahasan</button>
+          <button class="btn btnBlue" onclick="checkAnswers()">Cek skor akhir</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sectionHead" id="kunci">
+    <div><h2>Kunci cepat</h2><p>Kunci ringkas untuk cek cepat. Pembahasan lengkap tetap ada di tiap soal.</p></div>
+  </div>
+  <section class="panel"><div class="panelPad"><div id="answerKey" class="keyGrid"></div></div></section>
+</main>
+<div class="footer">Dibuat sebagai web statis satu file: HTML + CSS + JavaScript. Tidak memakai library dan tidak memakai database.</div>
+<script>
+const questions = [{"q": "The list of references ____ on the last page.", "opts": ["are", "is", "be", "were"], "ans": 1, "exp": "Subject-nya 'The list' tunggal, jadi verb-nya 'is'.", "cat": "Subject–Verb Agreement"}, {"q": "One of the students ____ absent yesterday.", "opts": ["were", "was", "are", "be"], "ans": 1, "exp": "'One' = tunggal; yesterday = past, jadi 'was'.", "cat": "Subject–Verb Agreement"}, {"q": "The results of the study ____ significant.", "opts": ["is", "are", "was", "be"], "ans": 1, "exp": "'Results' jamak, jadi 'are'.", "cat": "Subject–Verb Agreement"}, {"q": "Each of the questions ____ four choices.", "opts": ["have", "has", "are", "were"], "ans": 1, "exp": "'Each' selalu dianggap tunggal, jadi 'has'.", "cat": "Subject–Verb Agreement"}, {"q": "The lecturer, along with the assistants, ____ the class.", "opts": ["teach", "teaches", "are teaching", "have taught"], "ans": 1, "exp": "Subject inti 'lecturer' tunggal. Frasa 'along with...' diabaikan untuk agreement.", "cat": "Subject–Verb Agreement"}, {"q": "Neither the teacher nor the students ____ ready.", "opts": ["is", "was", "are", "be"], "ans": 2, "exp": "Dengan neither...nor, verb mengikuti subjek terdekat: 'students' jamak → are.", "cat": "Subject–Verb Agreement"}, {"q": "Neither the students nor the teacher ____ ready.", "opts": ["are", "were", "is", "have"], "ans": 2, "exp": "Subjek terdekat 'teacher' tunggal → is.", "cat": "Subject–Verb Agreement"}, {"q": "Reading academic texts ____ concentration.", "opts": ["need", "needs", "needing", "are needed"], "ans": 1, "exp": "Gerund 'Reading' sebagai subjek dianggap tunggal → needs.", "cat": "Subject–Verb Agreement"}, {"q": "To answer TOEFL questions quickly ____ practice.", "opts": ["require", "requires", "requiring", "are requiring"], "ans": 1, "exp": "To infinitive sebagai subjek dianggap tunggal → requires.", "cat": "Subject–Verb Agreement"}, {"q": "The information in the booklet ____ useful.", "opts": ["are", "were", "is", "be"], "ans": 2, "exp": "'Information' uncountable, dianggap tunggal → is.", "cat": "Subject–Verb Agreement"}, {"q": "This question is ____ than the previous one.", "opts": ["easy", "easier", "easiest", "more easy"], "ans": 1, "exp": "Ada 'than', pakai comparative: easier.", "cat": "Nouns & Verbs"}, {"q": "This is ____ explanation in the chapter.", "opts": ["clear", "clearer", "the clearest", "most clear"], "ans": 2, "exp": "Superlative biasanya memakai 'the' + -est/most.", "cat": "Nouns & Verbs"}, {"q": "The more carefully you read, ____ mistakes you make.", "opts": ["fewer", "the fewer", "the fewest", "few"], "ans": 1, "exp": "Pola: The more..., the fewer/the better/the higher...", "cat": "Nouns & Verbs"}, {"q": "My score is as high ____ yours.", "opts": ["than", "from", "as", "like"], "ans": 2, "exp": "Pola perbandingan setara: as ... as.", "cat": "Nouns & Verbs"}, {"q": "Of all students, Rina is ____ prepared.", "opts": ["more", "most", "the most", "as"], "ans": 2, "exp": "'Of all' menunjukkan superlative: the most prepared.", "cat": "Nouns & Verbs"}, {"q": "Several ____ were collected after class.", "opts": ["paper", "papers", "paperes", "paper’s"], "ans": 1, "exp": "'Several' diikuti countable plural noun: papers.", "cat": "Nouns & Verbs"}, {"q": "The scientist studied two ____.", "opts": ["phenomenon", "phenomenons", "phenomena", "phenomenas"], "ans": 2, "exp": "Plural dari phenomenon adalah phenomena.", "cat": "Nouns & Verbs"}, {"q": "A lot of research ____ needed before publication.", "opts": ["are", "were", "is", "have"], "ans": 2, "exp": "'Research' uncountable, dianggap tunggal → is.", "cat": "Nouns & Verbs"}, {"q": "The news about the exam ____ surprising.", "opts": ["are", "were", "is", "have"], "ans": 2, "exp": "'News' terlihat jamak, tetapi grammar-nya tunggal → is.", "cat": "Clauses & Pronouns"}, {"q": "The children usually ____ their homework early.", "opts": ["finishes", "finish", "finishing", "finished"], "ans": 1, "exp": "'Children' jamak; present simple jamak memakai verb dasar: finish.", "cat": "Clauses & Pronouns"}, {"q": "She ____ in this university since 2022.", "opts": ["studies", "studied", "has studied", "had studied"], "ans": 2, "exp": "'Since 2022' biasanya present perfect: has studied.", "cat": "Clauses & Pronouns"}, {"q": "Yesterday, the students ____ a TOEFL practice test.", "opts": ["take", "took", "taken", "taking"], "ans": 1, "exp": "'Yesterday' menunjukkan simple past: took.", "cat": "Clauses & Pronouns"}, {"q": "By the time the lecturer arrived, the class ____ already started.", "opts": ["has", "had", "was", "is"], "ans": 1, "exp": "Kejadian yang terjadi sebelum past event memakai past perfect: had started.", "cat": "Clauses & Pronouns"}, {"q": "The article ____ by three reviewers.", "opts": ["reviewed", "reviewing", "was reviewed", "reviews"], "ans": 2, "exp": "Kalimat pasif: was reviewed.", "cat": "Clauses & Pronouns"}, {"q": "The man ____ near the door is the examiner.", "opts": ["stands", "standing", "stood", "stand"], "ans": 1, "exp": "Reduced adjective clause: the man who is standing → the man standing.", "cat": "Clauses & Pronouns"}, {"q": "Every applicant must bring ____ identification card.", "opts": ["their", "his or her", "them", "they"], "ans": 1, "exp": "Dalam TOEFL grammar tradisional, 'every applicant' tunggal → his or her.", "cat": "Clauses & Pronouns"}, {"q": "The bird cleaned ____ wings.", "opts": ["it's", "its", "their", "they're"], "ans": 1, "exp": "'Its' = miliknya; 'it's' = it is.", "cat": "Clauses & Pronouns"}, {"q": "The students said that ____ needed more practice.", "opts": ["he", "she", "it", "they"], "ans": 3, "exp": "'Students' jamak, pronoun-nya 'they'.", "cat": "Adjective, Adverb & Article"}, {"q": "The author ____ article we read is from Canada.", "opts": ["who", "whose", "which", "whom"], "ans": 1, "exp": "'Whose' menunjukkan kepemilikan: whose article.", "cat": "Adjective, Adverb & Article"}, {"q": "The book ____ I borrowed yesterday is very helpful.", "opts": ["who", "whom", "that", "whose"], "ans": 2, "exp": "Untuk benda dapat memakai 'that/which'. Di opsi ini yang benar 'that'.", "cat": "Adjective, Adverb & Article"}, {"q": "The woman ____ teaches grammar is my lecturer.", "opts": ["who", "whom", "which", "whose"], "ans": 0, "exp": "Untuk orang sebagai subjek adjective clause: who.", "cat": "Adjective, Adverb & Article"}, {"q": "The strategy ____ helps students most is skimming.", "opts": ["who", "that", "whom", "whose"], "ans": 1, "exp": "Untuk benda/konsep: that/which. Di opsi ini 'that'.", "cat": "Adjective, Adverb & Article"}, {"q": "The lecture was ____ than I expected.", "opts": ["more difficult", "most difficult", "difficultly", "as difficult"], "ans": 0, "exp": "Ada 'than', jadi comparative: more difficult.", "cat": "Adjective, Adverb & Article"}, {"q": "The speaker explained the topic ____.", "opts": ["clear", "clearly", "clearness", "clearer"], "ans": 1, "exp": "Menjelaskan verb 'explained', jadi pakai adverb: clearly.", "cat": "Adjective, Adverb & Article"}, {"q": "The instruction was so ____ that many students were confused.", "opts": ["confuse", "confused", "confusing", "confusion"], "ans": 2, "exp": "Benda yang membuat orang bingung = confusing.", "cat": "Adjective, Adverb & Article"}, {"q": "She bought ____ umbrella before class.", "opts": ["a", "an", "the", "no article"], "ans": 1, "exp": "'Umbrella' dimulai bunyi vokal, jadi 'an'.", "cat": "Preposition & Usage"}, {"q": "He is ____ honest student.", "opts": ["a", "an", "the", "no article"], "ans": 1, "exp": "'Honest' dimulai bunyi vokal /ɒ/ karena h tidak dibaca, jadi 'an'.", "cat": "Preposition & Usage"}, {"q": "____ moon can be seen tonight.", "opts": ["A", "An", "The", "no article"], "ans": 2, "exp": "Benda unik/khusus seperti moon biasanya memakai 'the'.", "cat": "Preposition & Usage"}, {"q": "We need ____ information about the final exam.", "opts": ["an", "many", "some", "a"], "ans": 2, "exp": "'Information' uncountable, tidak memakai a/an; 'some information' benar.", "cat": "Preposition & Usage"}, {"q": "They visited ____ University of Indonesia.", "opts": ["a", "an", "the", "no article"], "ans": 2, "exp": "Nama institusi dengan pola 'University of...' biasanya memakai 'the'.", "cat": "Preposition & Usage"}, {"q": "The class begins ____ 8 a.m.", "opts": ["in", "on", "at", "by"], "ans": 2, "exp": "Jam spesifik memakai 'at'.", "cat": "Preposition & Usage"}, {"q": "The final exam will be held ____ Monday.", "opts": ["in", "on", "at", "from"], "ans": 1, "exp": "Hari memakai 'on'.", "cat": "Preposition & Usage"}, {"q": "She lives ____ Tangerang Selatan.", "opts": ["in", "on", "at", "by"], "ans": 0, "exp": "Kota/wilayah memakai 'in'.", "cat": "Preposition & Usage"}, {"q": "The notes are ____ the table.", "opts": ["in", "on", "at", "to"], "ans": 1, "exp": "Di atas permukaan meja: on the table.", "cat": "Preposition & Usage"}, {"q": "Many students are interested ____ TOEFL practice.", "opts": ["for", "with", "in", "at"], "ans": 2, "exp": "Pola: interested in.", "cat": "Preposition & Usage"}, {"q": "This method is different ____ the old one.", "opts": ["than", "from", "with", "to"], "ans": 1, "exp": "Pola umum TOEFL: different from.", "cat": "Usage Traps"}, {"q": "The student is responsible ____ the group report.", "opts": ["to", "for", "with", "at"], "ans": 1, "exp": "Pola: responsible for.", "cat": "Usage Traps"}, {"q": "I prefer reading ____ listening.", "opts": ["than", "from", "to", "with"], "ans": 2, "exp": "Pola: prefer A to B.", "cat": "Usage Traps"}, {"q": "Please pay attention ____ the question stem.", "opts": ["to", "for", "in", "with"], "ans": 0, "exp": "Pola: pay attention to.", "cat": "Usage Traps"}, {"q": "She succeeded ____ answering the hardest item.", "opts": ["to", "on", "in", "with"], "ans": 2, "exp": "Pola: succeed in + V-ing.", "cat": "Usage Traps"}, {"q": "I need ____ example to understand the rule.", "opts": ["other", "another", "others", "the others"], "ans": 1, "exp": "'Another' = satu tambahan lagi.", "cat": "Reading"}, {"q": "Some students chose option A; ____ chose option B.", "opts": ["another", "other", "others", "the other"], "ans": 2, "exp": "'Others' berdiri sendiri sebagai pronoun plural.", "cat": "Reading"}, {"q": "The two answers look almost ____.", "opts": ["like", "alike", "unlike", "likely"], "ans": 1, "exp": "'Alike' biasanya setelah linking verb: look alike.", "cat": "Reading"}, {"q": "This sentence looks ____ the example in the book.", "opts": ["like", "alike", "unlike", "likely"], "ans": 0, "exp": "'Like' diikuti noun phrase: like the example.", "cat": "Reading"}, {"q": "There are ____ problems in this paragraph.", "opts": ["much", "many", "little", "a little"], "ans": 1, "exp": "'Problems' countable plural, pakai 'many'.", "cat": "Reading"}, {"q": "Passage: Students often struggle with reading questions because the passages are long and the time is limited. One useful strategy is skimming, which means reading quickly to get the general idea. Another strategy is scanning, which means looking for specific information such as names, dates, or numbers. In vocabulary questions, students should not depend only on a dictionary meaning; they should use context to choose the best meaning.\n\nWhat is the main idea of the passage?", "opts": ["The history of TOEFL tests", "Useful strategies for reading questions", "The danger of long passages", "How to memorize dictionaries"], "ans": 1, "exp": "Teks membahas skimming, scanning, dan context sebagai strategi reading.", "cat": "Reading"}, {"q": "In the passage, the word 'struggle' is closest in meaning to ____.", "opts": ["study", "answer", "have difficulty", "finish"], "ans": 2, "exp": "'Struggle with' berarti mengalami kesulitan.", "cat": "Reading"}, {"q": "In the passage, the word 'specific' is closest in meaning to ____.", "opts": ["particular", "general", "quick", "difficult"], "ans": 0, "exp": "'Specific' berarti khusus/tertentu.", "cat": "Reading"}, {"q": "Why should students use context in vocabulary questions?", "opts": ["Because dictionaries are not allowed in class", "Because all words have only one meaning", "Because context makes passages shorter", "Because the best meaning depends on the sentence"], "ans": 3, "exp": "Makna terbaik dalam vocabulary question harus sesuai konteks kalimat.", "cat": "Reading"}, {"q": "Which strategy is best for finding names, dates, or numbers?", "opts": ["Skimming", "Scanning", "Guessing randomly", "Reading the title only"], "ans": 1, "exp": "Scanning dipakai mencari informasi spesifik.", "cat": "Reading"}, {"q": "What is the tone of the passage?", "opts": ["Angry", "Humorous", "Instructional", "Doubtful"], "ans": 2, "exp": "Teks memberi arahan/penjelasan strategi, jadi instructional.", "cat": "Reading"}, {"q": "What is the purpose of the passage?", "opts": ["To explain reading strategies", "To tell a personal story", "To compare two universities", "To criticize students"], "ans": 0, "exp": "Tujuannya menjelaskan strategi reading.", "cat": "Reading"}, {"q": "In the first sentence, the word 'because' introduces a ____.", "opts": ["contrast", "reason", "condition", "comparison"], "ans": 1, "exp": "'Because' memperkenalkan alasan.", "cat": "Reading"}, {"q": "The phrase 'Another strategy' shows ____.", "opts": ["contrast", "result", "example", "addition"], "ans": 3, "exp": "'Another' menambahkan poin/strategi berikutnya.", "cat": "Reading"}, {"q": "If a question asks where specific information is located, what should you do first?", "opts": ["Read every word slowly", "Choose the longest answer", "Find keywords and scan the listed lines", "Ignore the passage"], "ans": 2, "exp": "Strategi meeting reading: pilih keyword, lalu scan bagian/line yang disebutkan.", "cat": "Reading"}];
+const letters = ["A","B","C","D"];
+let currentFilter = "All";
+function escapeHtml(s){return String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));}
+function cats(){return ["All", ...Array.from(new Set(questions.map(q=>q.cat)))];}
+function renderFilters(){
+  const counts = {}; questions.forEach(q=>counts[q.cat]=(counts[q.cat]||0)+1);
+  document.getElementById('filters').innerHTML = cats().map(c => `<button class="filterBtn ${currentFilter===c?'active':''}" onclick="setFilter('${c.replace(/'/g,"\'")}')"><span>${c==='All'?'Semua soal':c}</span><small>${c==='All'?questions.length:counts[c]}</small></button>`).join('');
+}
+function setFilter(c){currentFilter=c; renderFilters(); renderQuiz();}
+function renderQuiz(){
+  const box = document.getElementById("quizBox"); box.innerHTML = "";
+  questions.forEach((item, idx) => {
+    if(currentFilter!=="All" && item.cat!==currentFilter) return;
+    const chosen = getChosen(idx);
+    const div = document.createElement("article");
+    div.className = "question"; div.id = "qwrap"+idx;
+    div.innerHTML = `<div class="qTop"><span class="qNum">Soal ${idx+1}</span><span class="qCat">${escapeHtml(item.cat)}</span></div><div class="qText">${escapeHtml(item.q)}</div>`;
+    const opts = document.createElement('div'); opts.className='options';
+    item.opts.forEach((opt, oi) => {
+      const label = document.createElement("label"); label.className = "option";
+      if(chosen!==null){ if(oi===item.ans) label.classList.add('correct'); if(oi===chosen && oi!==item.ans) label.classList.add('wrong'); }
+      label.innerHTML = `<input type="radio" name="q${idx}" value="${oi}" ${chosen===oi?'checked':''}> <span class="letter">${letters[oi]}</span><span>${escapeHtml(opt)}</span>`;
+      label.querySelector('input').addEventListener('change',()=>selectAnswer(idx,oi));
+      opts.appendChild(label);
+    });
+    div.appendChild(opts);
+    const exp = document.createElement("div"); exp.id = "exp"+idx; exp.className = "explain";
+    if(chosen!==null){
+      exp.classList.add('show', chosen===item.ans?'good':'bad');
+      exp.innerHTML = explanationHtml(idx, chosen);
+    }
+    div.appendChild(exp); box.appendChild(div);
+  });
+  renderKey(); updateProgress();
+}
+function explanationHtml(idx, chosen){
+  const item = questions[idx];
+  const correct = item.ans;
+  const status = chosen===correct ? '✅ Benar.' : `❌ Belum tepat. Kamu memilih <b>${letters[chosen]}</b>, jawaban yang benar <b>${letters[correct]}</b>.`;
+  return `${status}<br><b>Kenapa?</b> ${escapeHtml(item.exp)}<br><b>Jawaban benar:</b> ${letters[correct]}. ${escapeHtml(item.opts[correct])}`;
+}
+function getChosen(idx){const el=document.querySelector(`input[name="q${idx}"]:checked`);return el?Number(el.value):null;}
+function selectAnswer(idx, oi){
+  const wrap = document.getElementById('qwrap'+idx); if(!wrap) return;
+  wrap.querySelectorAll('.option').forEach((label,i)=>{label.classList.remove('correct','wrong'); if(i===questions[idx].ans) label.classList.add('correct'); if(i===oi && i!==questions[idx].ans) label.classList.add('wrong');});
+  const exp = document.getElementById('exp'+idx); exp.className = 'explain show '+(oi===questions[idx].ans?'good':'bad'); exp.innerHTML = explanationHtml(idx,oi);
+  updateProgress();
+}
+function updateProgress(){
+  let answered=0; questions.forEach((_,i)=>{if(getChosen(i)!==null) answered++;});
+  const pct = Math.round(answered/questions.length*100);
+  document.getElementById('meterFill').style.width=pct+'%';
+  document.getElementById('sideProgress').textContent=`${answered} dari ${questions.length} soal terjawab`;
+  document.getElementById('progressMini').textContent=`${answered} / ${questions.length} terjawab`;
+}
+function checkAnswers(){
+  let correct=0, answered=0;
+  questions.forEach((item,idx)=>{
+    const chosen=getChosen(idx); if(chosen!==null) answered++; if(chosen===item.ans) correct++;
+    if(chosen!==null){ const exp=document.getElementById('exp'+idx); if(exp){exp.className='explain show '+(chosen===item.ans?'good':'bad');exp.innerHTML=explanationHtml(idx,chosen);} }
+  });
+  const score = Math.round(correct/questions.length*100);
+  const res=document.getElementById('result'); res.style.display='block';
+  let note = answered<questions.length ? `Masih ada ${questions.length-answered} soal belum dijawab.` : 'Semua soal sudah dijawab.';
+  res.innerHTML = `Skor: ${correct}/${questions.length} (${score})<small>${note} Baca pembahasan yang berwarna oranye/merah untuk memahami kesalahan.</small>`;
+  res.scrollIntoView({behavior:'smooth',block:'center'});
+}
+function showAllExplanations(){
+  questions.forEach((item,idx)=>{
+    const exp=document.getElementById('exp'+idx); if(!exp) return;
+    const chosen=getChosen(idx);
+    exp.className='explain show '+(chosen===null?'':(chosen===item.ans?'good':'bad'));
+    exp.innerHTML = chosen===null ? `💡 <b>Jawaban benar:</b> ${letters[item.ans]}. ${escapeHtml(item.opts[item.ans])}<br><b>Kenapa?</b> ${escapeHtml(item.exp)}` : explanationHtml(idx,chosen);
+  });
+}
+function resetQuiz(){
+  document.querySelectorAll('input[type=radio]').forEach(i=>i.checked=false);
+  document.getElementById('result').style.display='none';
+  renderQuiz();
+  window.location.hash='quiz';
+}
+function renderKey(){
+  const key=document.getElementById('answerKey');
+  key.innerHTML=questions.map((q,i)=>`<div class="key">${i+1} <span>${letters[q.ans]}</span></div>`).join('');
+}
+renderFilters(); renderQuiz();
+</script>
+</body>
+</html>
